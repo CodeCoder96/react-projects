@@ -1,5 +1,6 @@
 import Counter from "./Counter";
 import ProductItem from "./components/Products/ProductItem";
+import "./index.css"
 
 function App() {
   return (
