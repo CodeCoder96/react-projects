@@ -1,12 +1,11 @@
 import Counter from "./Counter";
-import ProductItem from "./components/Products/ProductItem";
-import "./index.css"
+import Products from "./components/Products/Products";
+import "./index.css";
 
 function App() {
   return (
     <div className="app">
-      <Counter />
-      <ProductItem />
+      <Products />
     </div>
   );
 }
