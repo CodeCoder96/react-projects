@@ -8,8 +8,9 @@ function ProductItem(props) {
         <img src={props.image} alt="product image" />
       </div>
       <div className="product-info">
-        <strong>{props.title}</strong>
-        <span>{props.price}</span>
+        <strong>{props.title.slice(0, 15)}...</strong>
+        <p>{props.desc.slice(0, 75)}...</p>
+        <span>{props.price}₺</span>
       </div>
     </div>
   );
@@ -18,7 +19,8 @@ function ProductItem(props) {
 ProductItem.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired
+  price: PropTypes.number.isRequired,
+  desc: PropTypes.string.isRequired,
 };
 
 export default ProductItem;
