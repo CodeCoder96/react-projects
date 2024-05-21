@@ -1,21 +1,24 @@
 import "./ProductItem.css";
+import PropTypes from "prop-types";
 
-function ProductItem() {
-  const image = "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg";
-  const title = "Çanta";
-  const price = 500;
-
+function ProductItem(props) {
   return (
     <div className="product-item">
       <div className="product-image">
-        <img src={image} alt="product image" />
+        <img src={props.image} alt="product image" />
       </div>
       <div className="product-info">
-        <strong>{title}</strong>
-        <span>{price}</span>
+        <strong>{props.title}</strong>
+        <span>{props.price}</span>
       </div>
     </div>
   );
 }
+
+ProductItem.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired
+};
 
 export default ProductItem;
